@@ -1,0 +1,19 @@
+{
+  "name": "yukiTuber",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.2.8",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
