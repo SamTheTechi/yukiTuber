@@ -1,9 +1,9 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
 import { createContext, useState } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { HapticTab } from '@/components/HapticTab';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { Colors } from '@/constants/Colors';
+import { Colors } from '@/constants/colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 
@@ -19,15 +19,15 @@ export default function TabLayout() {
   const [count, setCount] = useState<number>(0);
 
   return (
-    <>
-      <countContext.Provider value={{ count, setCount }} >
+    <countContext.Provider value={{ count, setCount }} >
+      <GestureHandlerRootView>
         <Tabs
           screenOptions={{
             tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
             headerShown: false,
             tabBarButton: HapticTab,
             tabBarStyle: {
-              height: 90,
+              height: 80,
               paddingTop: 15,
               paddingBottom: 20,
               bottom: 5,
@@ -50,7 +50,7 @@ export default function TabLayout() {
             }}
           />
         </Tabs>
-      </countContext.Provider>
-    </>
+      </GestureHandlerRootView>
+    </countContext.Provider>
   );
 }

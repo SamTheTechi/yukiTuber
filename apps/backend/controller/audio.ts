@@ -44,7 +44,6 @@ export const audioDownloader = async (c: Context) => {
     for await (const chunk of proc.stdout) {
       writer.write(chunk)
       totalBytes += chunk.length;
-      console.log(`Streamed: ${totalBytes} bytes`);
     }
 
     c.req.raw.signal.addEventListener('abort', () => {

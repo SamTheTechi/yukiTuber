@@ -56,7 +56,6 @@ export const videoDownloader = async (c: Context) => {
     for await (const chunk of proc.stdout) {
       writer.write(chunk)
       totalBytes += chunk.length;
-      console.log(`Streamed: ${totalBytes} bytes`);
     }
 
     // close stream on user disconnect
