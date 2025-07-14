@@ -1,1 +1,1 @@
-export const endpoint: string = 'http://192.168.52.152:3000';
+export const endpoint: string = 'http://localhost:3000';

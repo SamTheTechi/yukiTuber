@@ -23,5 +23,3 @@ EXPOSE 3000
 
 # run the server
 CMD [ "bun", "run", "dist/index.js" ]
-
-

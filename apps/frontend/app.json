@@ -4,7 +4,7 @@
     "slug": "YukiTuber",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.svg",
+    "icon": "./assets/images/icon.png",
     "scheme": "yukituber",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,10 +13,11 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icon.svg",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.samthetechi.YukiTuber"
     },
     "web": {
       "bundler": "metro",
@@ -38,6 +39,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "b2a62cb2-78d2-4c79-ba28-899dabcb5b80"
+      }
+    },
+    "owner": "samthetechi"
   }
 }

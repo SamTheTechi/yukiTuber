@@ -1,0 +1,23 @@
+.git
+.gitignore
+
+# Node/Bun junk
+node_modules
+.bun
+.pnpm
+npm-debug.log
+bun.lockb
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local caches / build artifacts
+dist
+.turbo
+.vscode
+.env
+.env.*
+*.log
