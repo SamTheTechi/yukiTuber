@@ -66,7 +66,6 @@ export default function HomeScreen() {
 
     try {
       const downloadUrl = endpoint + (format === 'mp4' ? '/video' : '/audio');
-      console.log(downloadUrl)
 
       const folderPath = FileSystem.documentDirectory + 'Downloads/';
       await FileSystem.makeDirectoryAsync(folderPath, { intermediates: true });
@@ -120,7 +119,7 @@ export default function HomeScreen() {
       reader.readAsDataURL(blob);
 
     } catch (error) {
-      console.error(error);
+      console.log(error);
       Alert.alert(`Error ${error}`);
       setIsDownloading(false);
     }

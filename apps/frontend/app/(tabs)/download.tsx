@@ -55,7 +55,7 @@ export default function DownloadsScreen() {
             const fileUri = folderPath + file;
             try {
               const info = await FileSystem.getInfoAsync(fileUri);
-              return { name: file, size: info.size, uri: fileUri };
+              return { name: file, size: undefined, uri: fileUri };
             } catch (error) {
               console.warn(`Could not get info for file: ${file}`, error);
               return { name: file, size: undefined, uri: fileUri };

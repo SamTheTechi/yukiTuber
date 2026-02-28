@@ -4,15 +4,17 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch index.ts"
+    "dev": "tsx watch index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
+    "@hono/node-server": "^1.19.4",
     "hono": "^4.8.4",
     "zod": "^4.0.5"
   }

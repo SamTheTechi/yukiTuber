@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { serve } from 'bun';
+import { serve } from '@hono/node-server';
 import { videoDownloader } from './controller/video.ts';
 import { audioDownloader } from './controller/audio.ts';
 import { metadata } from './controller/meta.ts';
@@ -11,10 +11,9 @@ app.post('/video', videoDownloader)
 app.post('/audio', audioDownloader)
 app.get('/ping', ping)
 app.post('/', metadata)
-
+console.log('Server Started');
 
 serve({
   fetch: app.fetch,
   port: 3000,
 });
-
